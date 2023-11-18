@@ -1,8 +1,14 @@
 <template>
   <div class="select">
     <select class="select__box" v-model="lang" @change="langStore.changeLang">
-      <option class="select__option" value="uk">Uk</option>
-      <option class="select__option" value="en">En</option>
+      <option
+        class="select__option"
+        v-for="option in options"
+        :key="option.value"
+        :value="option.value"
+      >
+        {{ option.text }}
+      </option>
     </select>
   </div>
 </template>
@@ -12,6 +18,10 @@ import { useLangStore } from '@/stores/lang'
 
 const langStore = useLangStore()
 const lang = langStore.lang
+const options = [
+  { value: 'uk', text: 'Укр' },
+  { value: 'en', text: 'En' }
+]
 </script>
 
 <style lang="scss" scoped>

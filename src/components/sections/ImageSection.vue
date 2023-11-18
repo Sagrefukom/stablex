@@ -1,7 +1,7 @@
 <template>
-  <div class="image">
+  <section class="image">
     <img src="@/assets/img/image_section_img.jpg" alt="" />
-  </div>
+  </section>
 </template>
 
 <script setup></script>
@@ -19,8 +19,20 @@
     width: 100%;
     height: 1px;
     background-color: #ffffff;
-    opacity: 0.8;
+    opacity: 0.5;
     bottom: 80px;
+    @media (max-width: 1200px) {
+      max-width: 70%;
+    }
+    @media (max-width: 992px) {
+      bottom: 50px;
+    }
+    @media (max-width: 768px) {
+      bottom: 30px;
+    }
+    @media (max-width: 768px) {
+      bottom: 15px;
+    }
   }
 }
 </style>

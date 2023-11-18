@@ -19,6 +19,12 @@ import TitleComponent from '@/components/ui/TitleComponent.vue'
 <style lang="scss" scoped>
 .service {
   margin: 150px 0;
+  @media (max-width: 768px) {
+    margin: 50px 0;
+  }
+  @media (max-width: 480px) {
+    margin: 15px 0;
+  }
   &__title {
     text-align: center;
     max-width: 750px;

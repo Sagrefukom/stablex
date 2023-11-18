@@ -32,12 +32,27 @@ const { tm } = useI18n()
 <style lang="scss" scoped>
 .choose {
   padding-top: 750px;
+  @media (max-width: 1200px) {
+    padding-top: 450px;
+  }
+  @media (max-width: 992px) {
+    padding-top: 350px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 0;
+  }
   &__wrapper {
     max-width: 700px;
     width: 100%;
     padding: 415px 0;
     position: relative;
     z-index: 3;
+    @media (max-width: 992px) {
+      padding: 350px 0;
+    }
+    @media (max-width: 768px) {
+      padding: 20px 0;
+    }
   }
   &__list {
     margin: 40px 0;
@@ -49,6 +64,15 @@ const { tm } = useI18n()
     font-weight: 300;
     line-height: 36px;
     list-style: none;
+    @media (max-width: 768px) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    @media (max-width: 480px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
     &:not(:first-child) {
       margin-top: 25px;
     }
@@ -61,6 +85,9 @@ const { tm } = useI18n()
     width: 100%;
     top: 0;
     left: 150px;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 }
 </style>

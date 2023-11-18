@@ -33,8 +33,11 @@ import ArrowIcon from '@/components/icons/ArrowIcon.vue'
   position: relative;
   &__wrapper {
     display: flex;
-    // padding-bottom: 500px;
     position: relative;
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__block {
     &--left {
@@ -44,11 +47,18 @@ import ArrowIcon from '@/components/icons/ArrowIcon.vue'
       max-width: 650px;
       width: 100%;
       z-index: 2;
+      @media (max-width: 1200px) {
+        align-items: center;
+        text-align: center;
+      }
     }
     &--right {
       position: absolute;
       right: 0;
       top: -70px;
+      @media (max-width: 1200px) {
+        position: initial;
+      }
     }
   }
   &__btn {
@@ -59,8 +69,10 @@ import ArrowIcon from '@/components/icons/ArrowIcon.vue'
     justify-content: center;
     align-items: center;
     position: absolute;
-    // bottom: -200px;
     width: 100%;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 }
 </style>

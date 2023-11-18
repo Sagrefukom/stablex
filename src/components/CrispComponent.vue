@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import { onMounted, onUnmounted, watch } from 'vue'
+import { onMounted, watch } from 'vue'
 import LanguageSelect from '@/components/ui/LanguageSelect.vue'
 import { Crisp } from 'crisp-sdk-web'
 import { useLangStore } from '@/stores/lang'
@@ -15,16 +15,10 @@ onMounted(() => {
   initChat(lang)
 })
 
-onUnmounted(() => {
-  //   Crisp.session.reset()
-  console.log(Crisp, 'unmount')
-})
-
 const initChat = (lang) => {
   Crisp.configure('01bd3d04-b94d-469b-a969-70566bc2d501', {
     locale: lang
   })
-  console.log(Crisp)
 }
 watch(
   () => langStore.lang,
