@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #070709;
+  font-family: 'Roboto-Medium';
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  font-weight: 700;
+  src: url('@/assets/fonts/Roboto/Roboto-Bold.woff2');
+}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  font-weight: 500;
+  src: url('@/assets/fonts/Roboto/Roboto-Medium.woff2');
+}
+
+@font-face {
+  font-family: 'Inter-Light';
+  font-weight: 300;
+  src: url('@/assets/fonts/Inter/Inter-Light.woff2');
+}
+
+@font-face {
+  font-family: 'Inter-Medium';
+  font-weight: 500;
+  src: url('@/assets/fonts/Inter/Inter-Medium.woff2');
+}
