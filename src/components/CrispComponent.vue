@@ -24,8 +24,10 @@ watch(
   () => langStore.lang,
   (newLang) => {
     if (newLang) {
+      window.CRISP_RUNTIME_CONFIG = {
+        locale: newLang
+      }
       Crisp.session.reset()
-      initChat(newLang)
     }
   }
 )
